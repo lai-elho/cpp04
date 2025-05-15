@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/15 17:21:02 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:21:03 by lai-elho         ###   ########.fr       */
+/*   Created: 2025/05/15 17:20:12 by lai-elho          #+#    #+#             */
+/*   Updated: 2025/05/15 17:20:13 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,14 @@ int main() {
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
-    std::cout << j->getType() << " makes sound: ";
-    j->makeSound();
-
-    std::cout << i->getType() << " makes sound: ";
-    i->makeSound();
-
     delete j;
     delete i;
 
-    std::cout << "\nTesting deep copy...\n";
     Dog dog1;
-    Dog dog2 = dog1; // Calls copy constructor
+    Dog dog2 = dog1;
+
+    dog1.makeSound();
+    dog2.makeSound();
 
     return 0;
 }

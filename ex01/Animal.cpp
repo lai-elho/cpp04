@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/15 17:21:02 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:21:03 by lai-elho         ###   ########.fr       */
+/*   Created: 2025/05/15 17:19:28 by lai-elho          #+#    #+#             */
+/*   Updated: 2025/05/15 17:19:29 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-int main() {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+Animal::Animal() : type("Animal") {
+    std::cout << "Animal constructed\n";
+}
 
-    std::cout << j->getType() << " makes sound: ";
-    j->makeSound();
+Animal::~Animal() {
+    std::cout << "Animal destroyed\n";
+}
 
-    std::cout << i->getType() << " makes sound: ";
-    i->makeSound();
+Animal::Animal(const Animal &other) {
+    type = other.type;
+}
 
-    delete j;
-    delete i;
+Animal &Animal::operator=(const Animal &other) {
+    if (this != &other)
+        type = other.type;
+    return *this;
+}
 
-    std::cout << "\nTesting deep copy...\n";
-    Dog dog1;
-    Dog dog2 = dog1; // Calls copy constructor
-
-    return 0;
+std::string Animal::getType() const {
+    return type;
 }

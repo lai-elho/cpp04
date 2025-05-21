@@ -6,7 +6,7 @@
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:19:58 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:19:59 by lai-elho         ###   ########.fr       */
+/*   Updated: 2025/05/21 00:40:49 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal {
+class Cat : public Animal
+{
 private:
-    Brain* brain;
+    Brain *brain;
+
 public:
     Cat();
-    ~Cat();
     Cat(const Cat &other);
     Cat &operator=(const Cat &other);
+    ~Cat();
 
     void makeSound() const;
 };

@@ -6,7 +6,7 @@
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:18:58 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:18:59 by lai-elho         ###   ########.fr       */
+/*   Updated: 2025/05/21 00:35:53 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ Brain &Brain::operator=(const Brain &other) {
     }
     return *this;
 }
+
+
 
 void Brain::setIdea(int index, const std::string &idea) {
     if (index >= 0 && index < 100)

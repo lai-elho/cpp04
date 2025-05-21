@@ -6,7 +6,7 @@
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:21:02 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:21:03 by lai-elho         ###   ########.fr       */
+/*   Updated: 2025/05/21 01:03:08 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main() {
 
     std::cout << "\nTesting deep copy...\n";
     Dog dog1;
-    Dog dog2 = dog1; // Calls copy constructor
-
+    Dog dog2 = dog1;
     return 0;
 }

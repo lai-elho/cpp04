@@ -6,16 +6,17 @@
 /*   By: lai-elho <lai-elho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 17:20:12 by lai-elho          #+#    #+#             */
-/*   Updated: 2025/05/15 17:20:13 by lai-elho         ###   ########.fr       */
+/*   Updated: 2025/05/21 00:47:47 by lai-elho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-int main() {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+int main()
+{
+    const Animal *j = new Dog();
+    const Animal *i = new Cat();
 
     delete j;
     delete i;

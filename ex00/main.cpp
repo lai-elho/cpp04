@@ -12,10 +12,21 @@
 
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-int main() {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+int main()
+{
+
+    std::cout << "--- TESTING ANIMAL INSTANTIATION ---\n";
+    Animal base;
+    std::cout << base.getType() << " makes sound: ";
+    base.makeSound();
+
+    std::cout << "\n--- TESTING ANIMAL POLYMORPHISM ---\n";
+
+    const Animal *j = new Dog();
+    const Animal *i = new Cat();
 
     std::cout << j->getType() << " makes sound: ";
     j->makeSound();
@@ -26,8 +37,19 @@ int main() {
     delete j;
     delete i;
 
-    std::cout << "\nTesting deep copy...\n";
-    Dog dog1;
-    Dog dog2 = dog1;
+    std::cout << "\n--- TESTING WRONG ANIMAL ---\n";
+
+    const WrongAnimal *wrongMeta = new WrongAnimal();
+    const WrongAnimal *wrongCat = new WrongCat();
+
+    std::cout << wrongCat->getType() << " makes sound: ";
+    wrongCat->makeSound();
+
+    std::cout << wrongMeta->getType() << " makes sound: ";
+    wrongMeta->makeSound();
+
+    delete wrongMeta;
+    delete wrongCat;
+
     return 0;
 }

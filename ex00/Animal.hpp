@@ -27,7 +27,7 @@ public:
     virtual ~Animal();
 
     std::string getType() const;
-    virtual void makeSound() const = 0; // PURE VIRTUAL FUNCTION
+    virtual void makeSound() const ; //VIRTUAL FUNCTION
 };
 
 #endif
